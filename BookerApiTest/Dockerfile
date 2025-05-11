@@ -2,14 +2,16 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
-# Install Node.js and Allure CLI
+# Install Node.js, Allure CLI, and Java
 RUN apt-get update && apt-get install -y \
     nodejs \
     npm \
     python3 \
-    openjdk-11-jdk \
-    && npm install -g allure-commandline \
-    && apt-get clean
+    software-properties-common && \
+    add-apt-repository ppa:openjdk-r/ppa && \
+    apt-get update && apt-get install -y openjdk-11-jdk && \
+    npm install -g allure-commandline && \
+    apt-get clean
 
 # Set JAVA_HOME environment variable
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
