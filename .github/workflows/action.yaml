@@ -71,12 +71,10 @@ jobs:
         echo ",,,,,,,,,,,,,,,,,++-----------------+++++++++++++++++++"
         ls -la ./bin/Debug/net8.0/
         echo ",,,,,,,,,,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx++++++++++++"
-
+        ls -la ./bin/Debug/net8.0/allure-results
+        echo ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,+++++++++++++1111111111111111111111111111111111"
         ls -la ./BookerApiTest/
         echo ",,,,,,,,,,,,,,,,,+++++++++++++++++++++++++++++++++++++++++++++"
-        ls -la ./BookerApiTest/bin/Debug/net8.0
-        ls -la ./BookerApiTest/bin/Debug/net8.0/allure-results
-
         
 
     # Step 5: Upload raw test results (.trx file)
@@ -84,7 +82,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: test-results
-        path: ./BookerApiTest/TestResults/test-results.trx
+        path: ./bin/Debug/net8.0/allure-results
 
     # Step 6: Upload Allure results
     - name: Upload Allure Results
