@@ -32,7 +32,10 @@ jobs:
     # Step 4: Build the Docker image
     - name: Build Docker image
       run: |
-        docker build -t booker-api-test:latest -f ./Githu/booking/BookerApiTest/Dockerfile .
+        pwd
+        ls
+        ls -la
+        docker build -t booker-api-test:latest -f ./Github/booking/BookerApiTest/Dockerfile .
 
     # Step 5: Run the container and execute tests
     - name: Run tests inside the container
