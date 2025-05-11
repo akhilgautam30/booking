@@ -32,49 +32,64 @@ jobs:
     # Step 4: Build the Docker image
     - name: Build Docker image
       run: |
-        pwd
-        ls
-        ls -la
         docker build -t booker-api-test:latest -f ./BookerApiTest/Dockerfile .
 
-    # Step 5: Run the container and execute tests
-    - name: Run tests inside the container
-      run: |
-        pwd
-        ls
-        ls -la
-        echo "2222222222222222222222222222222222222"
+    - name: Create directories
+      run: mkdir -p ./bin ./TestResults
 
-        ls -la ./BookerApiTest/bin/Debug/net8.0
-        echo "3333333333333333333333333333333"
-        ls -la ./BookerApiTest/bin/Debug/net8.0/allure-results
-        echo "44444444444444444444444444444"
-        rm -rf ./BookerApiTest/bin
-        ls -la ./BookerApiTest/         
-        echo ",,,,,,,,,,,,,,,---------------------------------------"
-        #docker run --rm booker-api-test:latest sh -c "dotnet build && dotnet test --logger 'trx;LogFileName=test-results.trx'" || true        #docker run --rm booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o ./allure-report --clean
-        #echo ",,,,,,,,,,,,,,22222222,,,"
-        
-        # Create directories for test results
-        mkdir -p ./test-results ./allure-report
-        
-        # Run tests with volume mounts (ignore test failure exit code)
+    - name: Build with Docker
+      run: |
+        docker run --rm \
+          -v $(pwd)/bin:/app/BookerApiTest/bin \
+          booker-api-test:latest \
+          dotnet build
+
+    - name: Run Tests with Docker
+      run: |
         docker run --rm \
           -v $(pwd)/bin:/app/BookerApiTest/bin \
           -v $(pwd)/TestResults:/app/BookerApiTest/TestResults \
           booker-api-test:latest \
-          sh -c "dotnet build && dotnet test --logger 'trx;LogFileName=test-results.trx'" || true
+          dotnet test --logger "trx;LogFileName=test-results.trx" || true
+
+    # # Step 5: Run the container and execute tests
+    # - name: Run tests inside the container
+    #   run: |
+    #     pwd
+    #     ls
+    #     ls -la
+    #     echo "2222222222222222222222222222222222222"
+
+    #     ls -la ./BookerApiTest/bin/Debug/net8.0
+    #     echo "3333333333333333333333333333333"
+    #     ls -la ./BookerApiTest/bin/Debug/net8.0/allure-results
+    #     echo "44444444444444444444444444444"
+    #     rm -rf ./BookerApiTest/bin
+    #     ls -la ./BookerApiTest/         
+    #     echo ",,,,,,,,,,,,,,,---------------------------------------"
+    #     #docker run --rm booker-api-test:latest sh -c "dotnet build && dotnet test --logger 'trx;LogFileName=test-results.trx'" || true        #docker run --rm booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o ./allure-report --clean
+    #     #echo ",,,,,,,,,,,,,,22222222,,,"
         
-        # Display test results
-        ls -la ./test-results
-        ls -la ./allure-report
-        echo ",,,,,,,,,,,,,,,,,++-----------------+++++++++++++++++++"
-        ls -la ./bin/Debug/net8.0/
-        echo ",,,,,,,,,,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx++++++++++++"
-        ls -la ./bin/Debug/net8.0/allure-results
-        echo ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,+++++++++++++1111111111111111111111111111111111"
-        ls -la ./BookerApiTest/
-        echo ",,,,,,,,,,,,,,,,,+++++++++++++++++++++++++++++++++++++++++++++"
+    #     # Create directories for test results
+    #     mkdir -p ./test-results ./allure-report
+        
+    #     # Run tests with volume mounts (ignore test failure exit code)
+    #     docker run --rm \
+    #       -v $(pwd)/bin:/app/BookerApiTest/bin \
+    #       -v $(pwd)/TestResults:/app/BookerApiTest/TestResults \
+    #       booker-api-test:latest \
+    #       sh -c "dotnet build && dotnet test --logger 'trx;LogFileName=test-results.trx'" || true
+        
+    #     # Display test results
+    #     ls -la ./test-results
+    #     ls -la ./allure-report
+    #     echo ",,,,,,,,,,,,,,,,,++-----------------+++++++++++++++++++"
+    #     ls -la ./bin/Debug/net8.0/
+    #     echo ",,,,,,,,,,xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx++++++++++++"
+    #     ls -la ./bin/Debug/net8.0/allure-results
+    #     echo ",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,+++++++++++++1111111111111111111111111111111111"
+    #     ls -la ./BookerApiTest/
+    #     echo ",,,,,,,,,,,,,,,,,+++++++++++++++++++++++++++++++++++++++++++++"
         
 
     # Step 5: Upload raw test results (.trx file)
