@@ -7,9 +7,7 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     npm \
     python3 \
-    software-properties-common && \
-    add-apt-repository ppa:openjdk-r/ppa && \
-    apt-get update && apt-get install -y openjdk-11-jdk && \
+    openjdk-11-jdk-headless && \
     npm install -g allure-commandline && \
     apt-get clean
 
