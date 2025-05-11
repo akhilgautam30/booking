@@ -3,7 +3,8 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 # Copy the project files
-COPY *.csproj ./BookerApiTest/
+COPY BookerApiTest/*.csproj ./BookerApiTest/
+COPY BookerApiTest/ ./BookerApiTest/
 RUN echo "Building the application......................"
 RUN ls -la
 RUN pwd
@@ -16,7 +17,16 @@ RUN pwd
 RUN ls -la /app/BookerApiTest
 RUN echo "Building the application11333333333............."
 
+
+# Copy the project files
+COPY . ./BookerApiTest/
+RUN ls -la
+RUN pwd
+RUN echo "Building the application14444444441......................"
+
+
 RUN dotnet restore
+
 
 # Copy the rest of the application files
 COPY . ./BookerApiTest/
