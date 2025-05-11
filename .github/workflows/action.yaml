@@ -44,11 +44,18 @@ jobs:
         ls
         ls -la
         docker run --rm booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" || true
-        docker run --rm booker-api-test:latest allure generate /app/test-results/allure-results -o /app/allure-report --clean
+        docker run --rm booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o /app/allure-report --clean
 
-    # Step 5: Upload test results
+    # Step 5: Upload raw test results (.trx file)
     - name: Upload Test Results
       uses: actions/upload-artifact@v4
       with:
         name: test-results
         path: ./BookerApiTest/TestResults/test-results.trx
+
+    # Step 6: Upload Allure results
+    - name: Upload Allure Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: allure-results
+        path: ./BookerApiTest/bin/Debug/net8.0/allure-results
