@@ -51,11 +51,18 @@ jobs:
     
     - name: Generate Allure Report
       run: |
+        # docker run --rm \
+        #   -v $(pwd)/allure-results:/app/BookerApiTest/bin/Debug/net8.0/allure-results \
+        #   -v $(pwd)/allure-report:/app/allure-report \
+        #   booker-api-test:latest \
+        #   allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o /app/allure-report --clean
+        mkdir -p ./allure-results
+        cp -r ./bin/Debug/net8.0/allure-results/* ./allure-results/ || true
         docker run --rm \
-          -v $(pwd)/allure-results:/app/BookerApiTest/bin/Debug/net8.0/allure-results \
-          -v $(pwd)/allure-report:/app/allure-report \
-          booker-api-test:latest \
-          allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o /app/allure-report --clean
+        -v $(pwd)/allure-results:/allure-results \
+        -v $(pwd)/allure-report:/allure-report \
+        booker-api-test:latest \
+        allure generate /allure-results -o /allure-report --clean
 
     # Step 5: Upload test results
     - name: Upload Test Results
