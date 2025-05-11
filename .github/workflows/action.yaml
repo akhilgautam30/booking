@@ -66,9 +66,9 @@ jobs:
         # Display test results
         ls -la ./test-results
         ls -la ./allure-report
+        echo ",,,,,,,,,,,,,,,,,++-----------------+++++++++++++++++++"
 
-        ls -la
-        pwd
+        ls -la ./BookerApiTest/
         echo ",,,,,,,,,,,,,,,,,+++++++++++++++++++++++++++++++++++++++++++++"
         ls -la ./BookerApiTest/bin/Debug/net8.0
         ls -la ./BookerApiTest/bin/Debug/net8.0/allure-results
