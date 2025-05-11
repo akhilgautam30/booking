@@ -65,6 +65,7 @@ jobs:
         ls -la
         pwd
         echo ",,,,,,,,,,,,,,,,,"
+        ls -la ./BookerApiTest
 
         
 
