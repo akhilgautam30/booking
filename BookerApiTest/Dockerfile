@@ -16,26 +16,28 @@ RUN dotnet restore
 # Copy the rest of the application files
 RUN dotnet build --configuration Release --output /app/build
 
-# Publish the application
-RUN dotnet publish --configuration Release --output /app/publish
+RUN dotnet test
 
-# Use the runtime image for running the application
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-WORKDIR /app
-COPY --from=build /app/publish .
+# # Publish the application
+# RUN dotnet publish --configuration Release --output /app/publish
 
-# Install Node.js and Allure CLI
-RUN apt-get update && apt-get install -y \
-    nodejs \
-    npm \
-    python3 \
-    && npm install -g allure-commandline \
-    && apt-get clean
+# # Use the runtime image for running the application
+# FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+# WORKDIR /app
+# COPY --from=build /app/publish .
 
-# Copy the test results directory
-COPY --from=build /app/build/bin/Debug/net8.0 /app/test-results
+# # Install Node.js and Allure CLI
+# RUN apt-get update && apt-get install -y \
+#     nodejs \
+#     npm \
+#     python3 \
+#     && npm install -g allure-commandline \
+#     && apt-get clean
 
-# Run tests, generate Allure report, and serve it
-CMD dotnet test --logger "trx;LogFileName=test-results.trx" && \
-    allure generate /app/test-results/allure-results -o /app/allure-report --clean && \
-    npx http-server /app/allure-report -p 8000
+# # Copy the test results directory
+# COPY --from=build /app/build/bin/Debug/net8.0 /app/test-results
+
+# # Run tests, generate Allure report, and serve it
+# CMD dotnet test --logger "trx;LogFileName=test-results.trx" && \
+#     allure generate /app/test-results/allure-results -o /app/allure-report --clean && \
+#     npx http-server /app/allure-report -p 8000
