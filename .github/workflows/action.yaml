@@ -43,22 +43,27 @@ jobs:
         pwd
         ls
         ls -la
-        docker run --rm booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" || true
-        docker run --rm booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o ./allure-report --clean
+        #docker run --rm booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" || true
+        #docker run --rm booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o ./allure-report --clean
+        
+        # Run tests and generate allure-results
+        docker run --rm -v /runner/work/booking/booking/BookerApiTest:/app/BookerApiTest booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" || true
+        # Generate Allure report
+        docker run --rm -v /runner/work/booking/booking/BookerApiTest:/app/BookerApiTest -v /runner/work/booking/booking/allure-report:/app/allure-report booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o /app/allure-report --clean
         echo ",,,,,,,,,,,,,,22222222,,,"
         
         ls -la
-        pwd
+        
         echo ",,,,,,,,,,,,,,,,,"
-        ls -la /app/BookerApiTest
+        ls -la /runner/work/booking/booking/BookerApiTest
         echo "-----------111---------"
-        ls -la /app/BookerApiTest/bin
+        ls -la /runner/work/booking/booking/BookerApiTest/bin
         echo "-----------111---------"
-        ls -la /app/bin/Debug
+        ls -la /runner/work/booking/booking/BookerApiTest/bin/Debug
         echo "-----------111---------"
-        ls -la /BookerApiTest/bin/Debug/net8.0
+        ls -la /runner/work/booking/booking/BookerApiTest/bin/Debug/net8.0
         echo "-----------111---------"
-        sudo ls -la /BookerApiTest/bin/Debug/net8.0/allure-results
+        sudo ls -la /runner/work/booking/booking/BookerApiTest/bin/Debug/net8.0/allure-results
         echo "--------------------"
         
 
