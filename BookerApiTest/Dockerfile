@@ -5,6 +5,8 @@ WORKDIR /app
 RUN echo "Building the application......................"
 RUN ls -la
 RUN pwd
+RUN ls -la /app
+RUN echo "Building the application11111111111......................"
 
 # Copy the project files
 COPY *.csproj ./BookerApiTest/
