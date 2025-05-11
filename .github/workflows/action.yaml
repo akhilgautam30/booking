@@ -37,7 +37,7 @@ jobs:
         ls -la
         docker build -t booker-api-test:latest -f ./BookerApiTest/Dockerfile .
 
- # Step 5: Run the container and execute tests
+    # Step 5: Run the container and execute tests
     - name: Run tests inside the container
       run: |
         pwd
