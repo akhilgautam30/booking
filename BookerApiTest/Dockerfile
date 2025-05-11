@@ -19,10 +19,10 @@ RUN dotnet rebuild --configuration Release --output /app/build
 # Publish the application
 RUN dotnet publish --configuration Release --output /app/publish
 
-# # Use the runtime image for running the application
-# FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
-# WORKDIR /app
-# COPY --from=build /app/publish .
+# Use the runtime image for running the application
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+COPY --from=build /app/publish .
 
 # Install Node.js and Allure CLI
 RUN apt-get update && apt-get install -y \
