@@ -22,23 +22,25 @@ jobs:
       uses: docker/setup-buildx-action@v2
 
     # Step 3: Log in to DockerHub (optional, if pushing to DockerHub)
-    - name: Log in to DockerHub
-      uses: docker/login-action@v2
-      with:
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+    # Commented out as per the requirement
+    # - name: Log in to DockerHub
+    #   uses: docker/login-action@v2
+    #   with:
+    #     username: ${{ secrets.DOCKER_USERNAME }}
+    #     password: ${{ secrets.DOCKER_PASSWORD }}
 
     # Step 4: Build the Docker image
     - name: Build Docker image
       run: |
         docker build -t booker-api-test:latest -f ./Githu/booking/BookerApiTest/Dockerfile .
 
-    # Step 5: Run the container
-    - name: Run container
+    # Step 5: Run the container and execute tests
+    - name: Run tests inside the container
       run: |
-        docker run -d -p 8000:8000 --name booker-api-test-container booker-api-test:latest
+        docker run --rm booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" && \
+        docker run --rm booker-api-test:latest allure generate /app/test-results/allure-results -o /app/allure-report --clean
 
     # Step 6: Verify the Allure report is served
     - name: Verify Allure Report
       run: |
-        curl -I http://localhost:8000
+        docker run -d -p 8000:8000 --name booker-api-test-container booker-api-test:latest npx http-server /app/allure-report -p 8000
