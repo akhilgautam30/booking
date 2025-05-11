@@ -71,7 +71,7 @@ jobs:
         path: ./TestResults
 
     - name: Upload Allure Report as Artifact
-    uses: actions/upload-artifact@v3
-    with:
-      name: allure-report-local
-      path: allure-report/
+      uses: actions/upload-artifact@v3
+      with:
+        name: allure-report-local
+        path: allure-report/
