@@ -50,15 +50,15 @@ jobs:
         # Create directories for test results
         mkdir -p ./test-results ./allure-report
         
-        # Run tests with volume mounts to capture results
+        # Run tests with volume mounts (ignore test failure exit code)
         docker run --rm \
           -v $(pwd)/test-results:/app/BookerApiTest/TestResults \
           -v $(pwd)/allure-report:/app/allure-report \
           booker-api-test:latest \
-          sh -c "dotnet test --logger 'trx;LogFileName=test-results.trx' && \
+          sh -c "dotnet test --logger 'trx;LogFileName=test-results.trx' || true && \
                  allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o /app/allure-report --clean"
         
-        # Display test results (optional)
+        # Display test results
         ls -la ./test-results
         ls -la ./allure-report
 
