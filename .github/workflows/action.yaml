@@ -47,7 +47,8 @@ jobs:
         ls -la ./BookerApiTest/bin/Debug/net8.0/allure-results
         rm -rf ./BookerApiTest/bin
         ls -la         
-        #docker run --rm booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" || true
+        echo ",,,,,,,,,,,,,,,---------------------------------------"
+        docker run --rm booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" || true
         #docker run --rm booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o ./allure-report --clean
         #echo ",,,,,,,,,,,,,,22222222,,,"
         
@@ -55,12 +56,12 @@ jobs:
         mkdir -p ./test-results ./allure-report
         
         # Run tests with volume mounts (ignore test failure exit code)
-        docker run --rm \
-          -v $(pwd)/test-results:/app/BookerApiTest/TestResults \
-          -v $(pwd)/allure-report:/app/allure-report \
-          booker-api-test:latest \
-          sh -c "dotnet test --logger 'trx;LogFileName=test-results.trx' || true && \
-                 allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o /app/allure-report --clean"
+        # docker run --rm \
+        #   -v $(pwd)/test-results:/app/BookerApiTest/TestResults \
+        #   -v $(pwd)/allure-report:/app/allure-report \
+        #   booker-api-test:latest \
+        #   sh -c "dotnet test --logger 'trx;LogFileName=test-results.trx' || true && \
+        #          allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o /app/allure-report --clean"
         
         # Display test results
         ls -la ./test-results
@@ -68,7 +69,7 @@ jobs:
 
         ls -la
         pwd
-        echo ",,,,,,,,,,,,,,,,,"
+        echo ",,,,,,,,,,,,,,,,,+++++++++++++++++++++++++++++++++++++++++++++"
         ls -la ./BookerApiTest/bin/Debug/net8.0
         ls -la ./BookerApiTest/bin/Debug/net8.0/allure-results
 
