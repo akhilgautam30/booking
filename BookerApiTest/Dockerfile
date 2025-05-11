@@ -15,11 +15,16 @@ RUN apt-get update && apt-get install -y \
 ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
 ENV PATH=$JAVA_HOME/bin:$PATH
 
+RUN echo "Building the application11111111111111111........"
+# Debug: Print JAVA_HOME to verify
+RUN echo "JAVA_HOME is set to: $JAVA_HOME" && ls -la $JAVA_HOME
+RUN echo "Building the application2222222222........"
+
+
 # Copy the project files
 COPY BookerApiTest/*.csproj ./BookerApiTest/
 COPY BookerApiTest/ ./BookerApiTest/
 WORKDIR /app/BookerApiTest
-RUN echo "Building the application2222222222........"
 RUN ls -la
 RUN pwd
 
