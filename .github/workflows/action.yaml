@@ -47,7 +47,7 @@ jobs:
         #docker run --rm booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o ./allure-report --clean
         
         # Run tests and generate allure-results
-        docker run --rm -v /runner/work/booking/booking/BookerApiTest:/app/BookerApiTest booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" || true
+        docker run --rm -v /runner/work/booking/booking/BookerApiTest:/app/BookerApiTest -w /app/BookerApiTest booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" || true
         # Generate Allure report
         docker run --rm -v /runner/work/booking/booking/BookerApiTest:/app/BookerApiTest -v /runner/work/booking/booking/allure-report:/app/allure-report booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o /app/allure-report --clean
         echo ",,,,,,,,,,,,,,22222222,,,"
