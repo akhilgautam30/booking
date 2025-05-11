@@ -50,11 +50,11 @@ jobs:
         ls -la
         pwd
         echo ",,,,,,,,,,,,,,,,,"
-        ls -la /runner/work/booking/booking/BookerApiTest
+        ls -la /runner/work/booking/booking
         echo "-----------111---------"
-        ls -la /runner/work/booking/booking/BookerApiTest/bin
+        ls -la /runner/work/booking/booking/bin
         echo "-----------111---------"
-        ls -la /app/BookerApiTest/bin/Debug
+        ls -la /app/bin/Debug
         echo "-----------111---------"
         ls -la /BookerApiTest/bin/Debug/net8.0
         echo "-----------111---------"
