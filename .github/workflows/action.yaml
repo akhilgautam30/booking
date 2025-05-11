@@ -50,15 +50,15 @@ jobs:
         ls -la
         
         echo ",,,,,,,,,,,,,,,,,"
-        ls -la /app/BookerApiTest/
+        ls -la /BookerApiTest/
         echo "-----------111---------"
-        ls -la /app/BookerApiTest/bin
+        ls -la /BookerApiTest/bin
         echo "-----------111---------"
-        ls -la /app/BookerApiTest/bin/Debug
+        ls -la /BookerApiTest/bin/Debug
         echo "-----------111---------"
-        ls -la /app/BookerApiTest/bin/Debug/net8.0
+        ls -la /BookerApiTest/bin/Debug/net8.0
         echo "-----------111---------"
-        sudo ls -la /app/BookerApiTest/bin/Debug/net8.0/allure-results
+        sudo ls -la /BookerApiTest/bin/Debug/net8.0/allure-results
         echo "--------------------"
         
 
