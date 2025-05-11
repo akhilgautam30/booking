@@ -14,7 +14,7 @@ RUN dotnet restore
 
 
 # Copy the rest of the application files
-RUN dotnet rebuild --configuration Release --output /app/build
+RUN dotnet build --configuration Release --output /app/build
 
 # Publish the application
 RUN dotnet publish --configuration Release --output /app/publish
