@@ -32,7 +32,7 @@ RUN dotnet restore
 
 
 # Copy the rest of the application files
-RUN dotnet build --configuration Release --output /app/build
+#RUN dotnet build --configuration Release --output /app/build
 
 # RUN dotnet test
 

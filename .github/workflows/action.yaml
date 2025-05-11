@@ -43,8 +43,12 @@ jobs:
         pwd
         ls
         ls -la
+        echo "2222222222222222222222222222222222222"
+
         ls -la ./BookerApiTest/bin/Debug/net8.0
+        echo "3333333333333333333333333333333"
         ls -la ./BookerApiTest/bin/Debug/net8.0/allure-results
+        echo "44444444444444444444444444444"
         rm -rf ./BookerApiTest/bin
         ls -la         
         echo ",,,,,,,,,,,,,,,---------------------------------------"
