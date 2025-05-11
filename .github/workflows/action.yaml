@@ -45,6 +45,8 @@ jobs:
         ls -la
         ls -la ./BookerApiTest/bin/Debug/net8.0
         ls -la ./BookerApiTest/bin/Debug/net8.0/allure-results
+        rm -rf ./BookerApiTest/bin
+        ls -la         
         #docker run --rm booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" || true
         #docker run --rm booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o ./allure-report --clean
         #echo ",,,,,,,,,,,,,,22222222,,,"
