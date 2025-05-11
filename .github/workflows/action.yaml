@@ -35,11 +35,14 @@ jobs:
         pwd
         ls
         ls -la
-        docker build -t booker-api-test:latest -f ./Github/booking/BookerApiTest/Dockerfile .
+        docker build -t booker-api-test:latest -f ./BookerApiTest/Dockerfile .
 
     # Step 5: Run the container and execute tests
     - name: Run tests inside the container
       run: |
+        pwd
+        ls
+        ls -la
         docker run --rm booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" && \
         docker run --rm booker-api-test:latest allure generate /app/test-results/allure-results -o /app/allure-report --clean
 
