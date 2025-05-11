@@ -2,15 +2,20 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
+# Copy the project files
+COPY *.csproj ./BookerApiTest/
 RUN echo "Building the application......................"
 RUN ls -la
 RUN pwd
-RUN ls -la /app
 RUN echo "Building the application11111111111......................"
 
-# Copy the project files
-COPY *.csproj ./BookerApiTest/
 WORKDIR /app/BookerApiTest
+RUN echo "Building the application2222222222........"
+RUN ls -la
+RUN pwd
+RUN ls -la /app/BookerApiTest
+RUN echo "Building the application11333333333............."
+
 RUN dotnet restore
 
 # Copy the rest of the application files
