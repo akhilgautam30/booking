@@ -45,26 +45,27 @@ jobs:
         ls -la
         #docker run --rm booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" || true
         #docker run --rm booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o ./allure-report --clean
+        #echo ",,,,,,,,,,,,,,22222222,,,"
         
-        # Run tests and generate allure-results
-        docker run --rm -v /runner/work/booking/booking/BookerApiTest:/app/BookerApiTest -w /app/BookerApiTest booker-api-test:latest dotnet test --logger "trx;LogFileName=test-results.trx" || true
-        # Generate Allure report
-        docker run --rm -v /runner/work/booking/booking/BookerApiTest:/app/BookerApiTest -v /runner/work/booking/booking/allure-report:/app/allure-report booker-api-test:latest allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o /app/allure-report --clean
-        echo ",,,,,,,,,,,,,,22222222,,,"
+        # Create directories for test results
+        mkdir -p ./test-results ./allure-report
         
+        # Run tests with volume mounts to capture results
+        docker run --rm \
+          -v $(pwd)/test-results:/app/BookerApiTest/TestResults \
+          -v $(pwd)/allure-report:/app/allure-report \
+          booker-api-test:latest \
+          sh -c "dotnet test --logger 'trx;LogFileName=test-results.trx' && \
+                 allure generate /app/BookerApiTest/bin/Debug/net8.0/allure-results -o /app/allure-report --clean"
+        
+        # Display test results (optional)
+        ls -la ./test-results
+        ls -la ./allure-report
+
         ls -la
-        
+        pwd
         echo ",,,,,,,,,,,,,,,,,"
-        ls -la /runner/work/booking/booking/BookerApiTest
-        echo "-----------111---------"
-        ls -la /runner/work/booking/booking/BookerApiTest/bin
-        echo "-----------111---------"
-        ls -la /runner/work/booking/booking/BookerApiTest/bin/Debug
-        echo "-----------111---------"
-        ls -la /runner/work/booking/booking/BookerApiTest/bin/Debug/net8.0
-        echo "-----------111---------"
-        sudo ls -la /runner/work/booking/booking/BookerApiTest/bin/Debug/net8.0/allure-results
-        echo "--------------------"
+
         
 
     # Step 5: Upload raw test results (.trx file)

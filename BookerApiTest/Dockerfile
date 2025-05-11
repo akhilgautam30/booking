@@ -56,6 +56,6 @@ RUN dotnet build --configuration Release --output /app/build
 # COPY --from=build /app/build/bin/Debug/net8.0 /app/test-results
 
 # # Run tests, generate Allure report, and serve it
-CMD dotnet test --logger "trx;LogFileName=test-results.trx" && \
-    allure generate /app/test-results/allure-results -o /app/allure-report --clean && \
-    npx http-server /app/allure-report -p 8000
+#CMD dotnet test --logger "trx;LogFileName=test-results.trx" && \
+#    allure generate /app/test-results/allure-results -o /app/allure-report --clean && \
+#    npx http-server /app/allure-report -p 8000
