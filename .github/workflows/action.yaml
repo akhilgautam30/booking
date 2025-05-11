@@ -50,7 +50,7 @@ jobs:
         ls -la
         
         echo ",,,,,,,,,,,,,,,,,"
-        ls -la /BookerApiTest/
+        ls -la /BookerApiTest
         echo "-----------111---------"
         ls -la /BookerApiTest/bin
         echo "-----------111---------"
