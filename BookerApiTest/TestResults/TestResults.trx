@@ -1,0 +1,623 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="f8c1e039-9837-455d-968b-038a3340c667" name="Akhi@DESKTOP-3VSJ9LA 2025-05-10 15:57:14" runUser="DESKTOP-3VSJ9LA\Akhi" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-05-10T15:57:14.6580297+02:00" queuing="2025-05-10T15:57:14.6580301+02:00" start="2025-05-10T15:57:11.1933273+02:00" finish="2025-05-10T15:57:21.7686369+02:00" />
+  <TestSettings name="default" id="e0d46652-f5d2-48d1-a2a7-8812ac025f77">
+    <Deployment runDeploymentRoot="Akhi_DESKTOP-3VSJ9LA_2025-05-10_15_57_14" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="51e8a92f-d207-4103-9daf-a581f6dad8d4" testId="567a3b37-5ec5-69f7-7c5d-4348e1640b24" testName="GetBookingIDsWithEdgeCaseParameters(&quot;future dates&quot;,&quot;2030-01-01&quot;,&quot;2030-01-10&quot;,&quot;200&quot;,&quot;contain&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3731460" startTime="2025-05-10T15:57:15.9137297+02:00" endTime="2025-05-10T15:57:16.2868750+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="51e8a92f-d207-4103-9daf-a581f6dad8d4">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2030-01-01 |&#xD;
+  | checkout  | 2030-01-10 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="f00b7549-fa73-44de-ab9f-bccdc8317af4" testId="7194a192-f5eb-7af0-a928-ff5839d8cbdb" testName="GetBookingIDsWithValidParameters_HappyPath(&quot;Combined name+date&quot;,&quot;Sally&quot;,&quot;Brown&quot;,&quot;2014-03-13&quot;,&quot;2014-05-21&quot;,&quot;200&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3278170" startTime="2025-05-10T15:57:20.8779809+02:00" endTime="2025-05-10T15:57:21.2057972+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f00b7549-fa73-44de-ab9f-bccdc8317af4">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with valid parameters - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | firstname | Sally      |&#xD;
+  | lastname  | Brown      |&#xD;
+  | checkin   | 2014-03-13 |&#xD;
+  | checkout  | 2014-05-21 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7ab86bbf-feb4-40bf-9da3-03e0d9b9b70e" testId="3d12a631-4ab6-7607-3af7-bc906b8b2f0f" testName="GetBookingIDsWithEdgeCaseParameters(&quot;Invalid date format&quot;,&quot;2023/02/28&quot;,&quot;2023/03/01&quot;,&quot;200&quot;,&quot;not contain&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.5074370" startTime="2025-05-10T15:57:15.0646747+02:00" endTime="2025-05-10T15:57:15.5721115+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7ab86bbf-feb4-40bf-9da3-03e0d9b9b70e">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2023/02/28 |&#xD;
+  | checkout  | 2023/03/01 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c436928d-fd32-4fc3-a0e9-0a80660242c0" testId="f9fe192a-7def-3262-8ca4-3a1b425aac6e" testName="GetBookingDetailsWithInvalidID_ErrorCases(&quot;0&quot;,&quot;404&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3240480" startTime="2025-05-10T15:57:13.7547817+02:00" endTime="2025-05-10T15:57:14.0788293+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c436928d-fd32-4fc3-a0e9-0a80660242c0">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking details with invalid ID - Error Cases': Unable to activate the test context because the fixture context is active.&#xD;
+Given I have an invalid booking ID 0&#xD;
+-&gt; done: GetBookingSteps.GivenIHaveAnInvalidBookingID("0") (0.0s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.3s)&#xD;
+Then the booking details response status code should be 404&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsResponseStatusCodeShouldBe(404) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c1f962dc-e945-40c9-b108-f7e12b36f73e" testId="ad558806-3a2a-6c44-8843-c5dab1557e7e" testName="GetBookingIDsWithEdgeCaseParameters(&quot;Checkout before checkin&quot;,&quot;2023-03-01&quot;,&quot;2023-02-28&quot;,&quot;200&quot;,&quot;not contain&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3415460" startTime="2025-05-10T15:57:15.5721420+02:00" endTime="2025-05-10T15:57:15.9136876+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1f962dc-e945-40c9-b108-f7e12b36f73e">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2023-03-01 |&#xD;
+  | checkout  | 2023-02-28 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="1c892d30-85da-40ef-addf-d92671d85fef" testId="f9c7fa51-d047-5b3b-dcba-a8308fb2329b" testName="GetBookingDetailsWithInvalidID_ErrorCases(&quot;-1&quot;,&quot;404&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3154460" startTime="2025-05-10T15:57:14.0788610+02:00" endTime="2025-05-10T15:57:14.3943058+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1c892d30-85da-40ef-addf-d92671d85fef">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking details with invalid ID - Error Cases': Unable to activate the test context because the fixture context is active.&#xD;
+Given I have an invalid booking ID -1&#xD;
+-&gt; done: GetBookingSteps.GivenIHaveAnInvalidBookingID("-1") (0.0s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.3s)&#xD;
+Then the booking details response status code should be 404&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsResponseStatusCodeShouldBe(404) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b35a31d8-60d4-4cff-a0cc-cc8a7d94afec" testId="34736688-340f-df16-ec2d-d03f0a9160d9" testName="GetBookingIDsWithEdgeCaseParameters(&quot;Maximum date range&quot;,&quot;2010-01-01&quot;,&quot;2030-12-31&quot;,&quot;200&quot;,&quot;contain&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.6980090" startTime="2025-05-10T15:57:17.4518738+02:00" endTime="2025-05-10T15:57:18.1498822+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b35a31d8-60d4-4cff-a0cc-cc8a7d94afec">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2010-01-01 |&#xD;
+  | checkout  | 2030-12-31 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.7s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d2c0fc32-c6b9-4598-9a9b-a96f65ef899d" testId="dd557de1-44c8-42f9-38a0-d5af844f7317" testName="GetBookingDetailsWithValidID_HappyPath(&quot;2&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3248570" startTime="2025-05-10T15:57:14.7382108+02:00" endTime="2025-05-10T15:57:15.0630667+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d2c0fc32-c6b9-4598-9a9b-a96f65ef899d">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking details with valid ID - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+Given I request booking details for ID 2 with Accept: application/json header&#xD;
+-&gt; done: GetBookingSteps.GivenIRequestBookingDetailsForIDWithHeader(2) (0.0s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+And the response should contain valid booking details with JSON content type&#xD;
+-&gt; done: GetBookingSteps.ThenTheResponseShouldContainValidBookingDetailsWithJsonContentType() (0.0s)&#xD;
+And the booking details should have all required fields with correct types&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsShouldHaveAllRequiredFieldsWithCorrectTypes() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="eec897c2-4f26-45ca-a710-3376e3e4eac1" testId="2899c56b-6eae-9579-a7bb-643bbb53db18" testName="GetBookingIDsWithSpecialCharacters(&quot;Special chars&quot;,&quot;Johnny#&quot;,&quot;$mith&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3857310" startTime="2025-05-10T15:57:19.7308349+02:00" endTime="2025-05-10T15:57:20.1165653+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eec897c2-4f26-45ca-a710-3376e3e4eac1">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with special characters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value   |&#xD;
+  | firstname | Johnny# |&#xD;
+  | lastname  | $mith   |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="ac644b56-3af3-4ca0-a1c2-a9c287f35187" testId="944b0e07-b6bb-9ee1-c56a-2694c9858c3e" testName="GetBookingDetailsWithInvalidID_ErrorCases(&quot;999999999&quot;,&quot;404&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.6355150" startTime="2025-05-10T15:57:12.7956460+02:00" endTime="2025-05-10T15:57:13.4311204+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ac644b56-3af3-4ca0-a1c2-a9c287f35187">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking details with invalid ID - Error Cases': Unable to activate the test context because the fixture context is active.&#xD;
+Given I have an invalid booking ID 999999999&#xD;
+-&gt; done: GetBookingSteps.GivenIHaveAnInvalidBookingID("999999999") (0.1s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.5s)&#xD;
+Then the booking details response status code should be 404&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsResponseStatusCodeShouldBe(404) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="882e5659-56b1-48c7-b581-dbb3ff6721fd" testId="eed11379-dee5-0e05-297d-b64efa5e6e9c" testName="GetBookingIDsWithSpecialCharacters(&quot;Numbers in name&quot;,&quot;Agent&quot;,&quot;007&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3614100" startTime="2025-05-10T15:57:19.3693422+02:00" endTime="2025-05-10T15:57:19.7307522+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="882e5659-56b1-48c7-b581-dbb3ff6721fd">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with special characters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value |&#xD;
+  | firstname | Agent |&#xD;
+  | lastname  | 007   |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3ff7f33a-35d1-46e4-9dba-5700f323f54b" testId="ebca4223-746d-74f3-38e7-1586b3105cab" testName="GetBookingIDsWithEdgeCaseParameters(&quot;Far past dates&quot;,&quot;2000-01-01&quot;,&quot;2000-01-10&quot;,&quot;200&quot;,&quot;contain&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.7870660" startTime="2025-05-10T15:57:16.2869413+02:00" endTime="2025-05-10T15:57:17.0740066+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ff7f33a-35d1-46e4-9dba-5700f323f54b">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2000-01-01 |&#xD;
+  | checkout  | 2000-01-10 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.8s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="b3c20361-8c16-4133-859a-b8696af6f097" testId="b624173f-2b80-d3fe-de13-8deadb8f2ea0" testName="GetBookingIDsWithValidParameters_HappyPath(&quot;Date filter only&quot;,&quot;&quot;,&quot;&quot;,&quot;2014-03-13&quot;,&quot;2014-05-21&quot;,&quot;200&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.4224870" startTime="2025-05-10T15:57:20.4554168+02:00" endTime="2025-05-10T15:57:20.8779028+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b3c20361-8c16-4133-859a-b8696af6f097">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with valid parameters - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | firstname |            |&#xD;
+  | lastname  |            |&#xD;
+  | checkin   | 2014-03-13 |&#xD;
+  | checkout  | 2014-05-21 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="50b01c39-dae1-4163-a4cd-b160e91f4549" testId="7326d203-90dc-2ad2-b354-5a65401bc10c" testName="GetBookingDetailsWithInvalidID_ErrorCases(&quot;invalid_id&quot;,&quot;404&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3223690" startTime="2025-05-10T15:57:13.4323701+02:00" endTime="2025-05-10T15:57:13.7547380+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="50b01c39-dae1-4163-a4cd-b160e91f4549">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking details with invalid ID - Error Cases': Unable to activate the test context because the fixture context is active.&#xD;
+Given I have an invalid booking ID invalid_id&#xD;
+-&gt; done: GetBookingSteps.GivenIHaveAnInvalidBookingID("invalid_id") (0.0s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.3s)&#xD;
+Then the booking details response status code should be 404&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsResponseStatusCodeShouldBe(404) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="725db9ed-487e-475b-a04f-8f09c792707d" testId="734c68a2-aeaa-b307-9fec-70e8b2ffc41d" testName="GetBookingIDsWithSpecialCharacters(&quot;Space in name&quot;,&quot;Mary Jane&quot;,&quot;Parker Smith&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3519210" startTime="2025-05-10T15:57:19.0173613+02:00" endTime="2025-05-10T15:57:19.3692818+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="725db9ed-487e-475b-a04f-8f09c792707d">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with special characters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value        |&#xD;
+  | firstname | Mary Jane    |&#xD;
+  | lastname  | Parker Smith |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c1453583-3f1b-4b06-b351-307d0bffaa63" testId="6ef41a4e-1f14-c3ca-1033-2359c301b8e8" testName="GetBookingDetailsWithValidID_HappyPath(&quot;1&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3415480" startTime="2025-05-10T15:57:14.3966244+02:00" endTime="2025-05-10T15:57:14.7381719+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c1453583-3f1b-4b06-b351-307d0bffaa63">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking details with valid ID - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+Given I request booking details for ID 1 with Accept: application/json header&#xD;
+-&gt; done: GetBookingSteps.GivenIRequestBookingDetailsForIDWithHeader(1) (0.0s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+And the response should contain valid booking details with JSON content type&#xD;
+-&gt; done: GetBookingSteps.ThenTheResponseShouldContainValidBookingDetailsWithJsonContentType() (0.0s)&#xD;
+And the booking details should have all required fields with correct types&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsShouldHaveAllRequiredFieldsWithCorrectTypes() (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="abed4d43-4898-4ce1-bc95-e74c4a2118c0" testId="cad8e3c8-bc50-786a-444e-4735cba36224" testName="GetBookingIDsWithValidParameters_HappyPath(&quot;Name filter only&quot;,&quot;Sally&quot;,&quot;Brown&quot;,&quot;&quot;,&quot;&quot;,&quot;200&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3384450" startTime="2025-05-10T15:57:20.1169062+02:00" endTime="2025-05-10T15:57:20.4553502+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="abed4d43-4898-4ce1-bc95-e74c4a2118c0">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with valid parameters - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value |&#xD;
+  | firstname | Sally |&#xD;
+  | lastname  | Brown |&#xD;
+  | checkin   |       |&#xD;
+  | checkout  |       |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="122678d1-5671-498e-a516-d77625d2fb43" testId="561bb54e-b742-42ec-efd3-2142e44e9eb0" testName="GetBookingIDsWithSpecialCharacters(&quot;Hyphenated name&quot;,&quot;Anne-Marie&quot;,&quot;O'Connor&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.4316990" startTime="2025-05-10T15:57:18.1500123+02:00" endTime="2025-05-10T15:57:18.5817030+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="122678d1-5671-498e-a516-d77625d2fb43">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with special characters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | firstname | Anne-Marie |&#xD;
+  | lastname  | O'Connor   |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c4004601-2f91-4910-a9d6-35bda40ed5e7" testId="382672ed-ee50-17b0-4479-d23757ccce62" testName="GetBookingIDsWithEdgeCaseParameters(&quot;Single day stay&quot;,&quot;2023-02-28&quot;,&quot;2023-02-28&quot;,&quot;200&quot;,&quot;contain&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.3777330" startTime="2025-05-10T15:57:17.0740701+02:00" endTime="2025-05-10T15:57:17.4518022+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c4004601-2f91-4910-a9d6-35bda40ed5e7">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2023-02-28 |&#xD;
+  | checkout  | 2023-02-28 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="c4d1ac37-f6f9-4180-8aca-0ae45ea27016" testId="fdedfd8a-fcd6-7541-7943-407d3601c8ee" testName="GetBookingIDsWithSpecialCharacters(&quot;Accented characters&quot;,&quot;Jos�&quot;,&quot;Mu�oz&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.4350230" startTime="2025-05-10T15:57:18.5822803+02:00" endTime="2025-05-10T15:57:19.0173031+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c4d1ac37-f6f9-4180-8aca-0ae45ea27016">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with special characters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value |&#xD;
+  | firstname | Jos�  |&#xD;
+  | lastname  | Mu�oz |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="e1eb5e21-8da9-49bb-b2c7-7fe7a76d319f" testId="e2f25ae9-ae01-a339-e7e8-86d47fedbcff" testName="GetBookingIDsWithValidParameters_HappyPath(&quot;without parms&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;200&quot;,null)" computerName="DESKTOP-3VSJ9LA" duration="00:00:00.4987990" startTime="2025-05-10T15:57:21.2058337+02:00" endTime="2025-05-10T15:57:21.7046319+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="e1eb5e21-8da9-49bb-b2c7-7fe7a76d319f">
+      <Output>
+        <StdOut>Error starting test case for 'Get booking IDs with valid parameters - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value |&#xD;
+  | firstname |       |&#xD;
+  | lastname  |       |&#xD;
+  | checkin   |       |&#xD;
+  | checkout  |       |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.5s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)</StdOut>
+      </Output>
+    </UnitTestResult>
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="GetBookingIDsWithEdgeCaseParameters(&quot;Invalid date format&quot;,&quot;2023/02/28&quot;,&quot;2023/03/01&quot;,&quot;200&quot;,&quot;not contain&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="3d12a631-4ab6-7607-3af7-bc906b8b2f0f">
+      <Execution id="7ab86bbf-feb4-40bf-9da3-03e0d9b9b70e" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithEdgeCaseParameters(&quot;Invalid date format&quot;,&quot;2023/02/28&quot;,&quot;2023/03/01&quot;,&quot;200&quot;,&quot;not contain&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithEdgeCaseParameters(&quot;Far past dates&quot;,&quot;2000-01-01&quot;,&quot;2000-01-10&quot;,&quot;200&quot;,&quot;contain&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="ebca4223-746d-74f3-38e7-1586b3105cab">
+      <Execution id="3ff7f33a-35d1-46e4-9dba-5700f323f54b" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithEdgeCaseParameters(&quot;Far past dates&quot;,&quot;2000-01-01&quot;,&quot;2000-01-10&quot;,&quot;200&quot;,&quot;contain&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithSpecialCharacters(&quot;Space in name&quot;,&quot;Mary Jane&quot;,&quot;Parker Smith&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="734c68a2-aeaa-b307-9fec-70e8b2ffc41d">
+      <Execution id="725db9ed-487e-475b-a04f-8f09c792707d" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithSpecialCharacters(&quot;Space in name&quot;,&quot;Mary Jane&quot;,&quot;Parker Smith&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingDetailsWithInvalidID_ErrorCases(&quot;invalid_id&quot;,&quot;404&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="7326d203-90dc-2ad2-b354-5a65401bc10c">
+      <Execution id="50b01c39-dae1-4163-a4cd-b160e91f4549" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingDetailsAPIFeature" name="GetBookingDetailsWithInvalidID_ErrorCases(&quot;invalid_id&quot;,&quot;404&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithSpecialCharacters(&quot;Accented characters&quot;,&quot;Jos�&quot;,&quot;Mu�oz&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="fdedfd8a-fcd6-7541-7943-407d3601c8ee">
+      <Execution id="c4d1ac37-f6f9-4180-8aca-0ae45ea27016" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithSpecialCharacters(&quot;Accented characters&quot;,&quot;Jos�&quot;,&quot;Mu�oz&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithValidParameters_HappyPath(&quot;Date filter only&quot;,&quot;&quot;,&quot;&quot;,&quot;2014-03-13&quot;,&quot;2014-05-21&quot;,&quot;200&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="b624173f-2b80-d3fe-de13-8deadb8f2ea0">
+      <Execution id="b3c20361-8c16-4133-859a-b8696af6f097" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithValidParameters_HappyPath(&quot;Date filter only&quot;,&quot;&quot;,&quot;&quot;,&quot;2014-03-13&quot;,&quot;2014-05-21&quot;,&quot;200&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithValidParameters_HappyPath(&quot;Combined name+date&quot;,&quot;Sally&quot;,&quot;Brown&quot;,&quot;2014-03-13&quot;,&quot;2014-05-21&quot;,&quot;200&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="7194a192-f5eb-7af0-a928-ff5839d8cbdb">
+      <Execution id="f00b7549-fa73-44de-ab9f-bccdc8317af4" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithValidParameters_HappyPath(&quot;Combined name+date&quot;,&quot;Sally&quot;,&quot;Brown&quot;,&quot;2014-03-13&quot;,&quot;2014-05-21&quot;,&quot;200&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithSpecialCharacters(&quot;Special chars&quot;,&quot;Johnny#&quot;,&quot;$mith&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="2899c56b-6eae-9579-a7bb-643bbb53db18">
+      <Execution id="eec897c2-4f26-45ca-a710-3376e3e4eac1" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithSpecialCharacters(&quot;Special chars&quot;,&quot;Johnny#&quot;,&quot;$mith&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithSpecialCharacters(&quot;Numbers in name&quot;,&quot;Agent&quot;,&quot;007&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="eed11379-dee5-0e05-297d-b64efa5e6e9c">
+      <Execution id="882e5659-56b1-48c7-b581-dbb3ff6721fd" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithSpecialCharacters(&quot;Numbers in name&quot;,&quot;Agent&quot;,&quot;007&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingDetailsWithInvalidID_ErrorCases(&quot;-1&quot;,&quot;404&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="f9c7fa51-d047-5b3b-dcba-a8308fb2329b">
+      <Execution id="1c892d30-85da-40ef-addf-d92671d85fef" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingDetailsAPIFeature" name="GetBookingDetailsWithInvalidID_ErrorCases(&quot;-1&quot;,&quot;404&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingDetailsWithInvalidID_ErrorCases(&quot;0&quot;,&quot;404&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="f9fe192a-7def-3262-8ca4-3a1b425aac6e">
+      <Execution id="c436928d-fd32-4fc3-a0e9-0a80660242c0" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingDetailsAPIFeature" name="GetBookingDetailsWithInvalidID_ErrorCases(&quot;0&quot;,&quot;404&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithEdgeCaseParameters(&quot;Maximum date range&quot;,&quot;2010-01-01&quot;,&quot;2030-12-31&quot;,&quot;200&quot;,&quot;contain&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="34736688-340f-df16-ec2d-d03f0a9160d9">
+      <Execution id="b35a31d8-60d4-4cff-a0cc-cc8a7d94afec" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithEdgeCaseParameters(&quot;Maximum date range&quot;,&quot;2010-01-01&quot;,&quot;2030-12-31&quot;,&quot;200&quot;,&quot;contain&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingDetailsWithValidID_HappyPath(&quot;2&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="dd557de1-44c8-42f9-38a0-d5af844f7317">
+      <Execution id="d2c0fc32-c6b9-4598-9a9b-a96f65ef899d" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingDetailsAPIFeature" name="GetBookingDetailsWithValidID_HappyPath(&quot;2&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithValidParameters_HappyPath(&quot;without parms&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;200&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="e2f25ae9-ae01-a339-e7e8-86d47fedbcff">
+      <Execution id="e1eb5e21-8da9-49bb-b2c7-7fe7a76d319f" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithValidParameters_HappyPath(&quot;without parms&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;200&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithEdgeCaseParameters(&quot;future dates&quot;,&quot;2030-01-01&quot;,&quot;2030-01-10&quot;,&quot;200&quot;,&quot;contain&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="567a3b37-5ec5-69f7-7c5d-4348e1640b24">
+      <Execution id="51e8a92f-d207-4103-9daf-a581f6dad8d4" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithEdgeCaseParameters(&quot;future dates&quot;,&quot;2030-01-01&quot;,&quot;2030-01-10&quot;,&quot;200&quot;,&quot;contain&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithEdgeCaseParameters(&quot;Single day stay&quot;,&quot;2023-02-28&quot;,&quot;2023-02-28&quot;,&quot;200&quot;,&quot;contain&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="382672ed-ee50-17b0-4479-d23757ccce62">
+      <Execution id="c4004601-2f91-4910-a9d6-35bda40ed5e7" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithEdgeCaseParameters(&quot;Single day stay&quot;,&quot;2023-02-28&quot;,&quot;2023-02-28&quot;,&quot;200&quot;,&quot;contain&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithEdgeCaseParameters(&quot;Checkout before checkin&quot;,&quot;2023-03-01&quot;,&quot;2023-02-28&quot;,&quot;200&quot;,&quot;not contain&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="ad558806-3a2a-6c44-8843-c5dab1557e7e">
+      <Execution id="c1f962dc-e945-40c9-b108-f7e12b36f73e" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithEdgeCaseParameters(&quot;Checkout before checkin&quot;,&quot;2023-03-01&quot;,&quot;2023-02-28&quot;,&quot;200&quot;,&quot;not contain&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingDetailsWithValidID_HappyPath(&quot;1&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="6ef41a4e-1f14-c3ca-1033-2359c301b8e8">
+      <Execution id="c1453583-3f1b-4b06-b351-307d0bffaa63" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingDetailsAPIFeature" name="GetBookingDetailsWithValidID_HappyPath(&quot;1&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingDetailsWithInvalidID_ErrorCases(&quot;999999999&quot;,&quot;404&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="944b0e07-b6bb-9ee1-c56a-2694c9858c3e">
+      <Execution id="ac644b56-3af3-4ca0-a1c2-a9c287f35187" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingDetailsAPIFeature" name="GetBookingDetailsWithInvalidID_ErrorCases(&quot;999999999&quot;,&quot;404&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithValidParameters_HappyPath(&quot;Name filter only&quot;,&quot;Sally&quot;,&quot;Brown&quot;,&quot;&quot;,&quot;&quot;,&quot;200&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="cad8e3c8-bc50-786a-444e-4735cba36224">
+      <Execution id="abed4d43-4898-4ce1-bc95-e74c4a2118c0" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithValidParameters_HappyPath(&quot;Name filter only&quot;,&quot;Sally&quot;,&quot;Brown&quot;,&quot;&quot;,&quot;&quot;,&quot;200&quot;,null)" />
+    </UnitTest>
+    <UnitTest name="GetBookingIDsWithSpecialCharacters(&quot;Hyphenated name&quot;,&quot;Anne-Marie&quot;,&quot;O'Connor&quot;,null)" storage="c:\users\akhi\source\repos\bookerapitest\bookerapitest\bin\debug\net8.0\bookerapitest.dll" id="561bb54e-b742-42ec-efd3-2142e44e9eb0">
+      <Execution id="122678d1-5671-498e-a516-d77625d2fb43" />
+      <TestMethod codeBase="C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll" adapterTypeName="executor://nunit3testexecutor/" className="BookerApiTest.Features.BookingIDsAPIFeature" name="GetBookingIDsWithSpecialCharacters(&quot;Hyphenated name&quot;,&quot;Anne-Marie&quot;,&quot;O'Connor&quot;,null)" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="567a3b37-5ec5-69f7-7c5d-4348e1640b24" executionId="51e8a92f-d207-4103-9daf-a581f6dad8d4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7194a192-f5eb-7af0-a928-ff5839d8cbdb" executionId="f00b7549-fa73-44de-ab9f-bccdc8317af4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3d12a631-4ab6-7607-3af7-bc906b8b2f0f" executionId="7ab86bbf-feb4-40bf-9da3-03e0d9b9b70e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f9fe192a-7def-3262-8ca4-3a1b425aac6e" executionId="c436928d-fd32-4fc3-a0e9-0a80660242c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ad558806-3a2a-6c44-8843-c5dab1557e7e" executionId="c1f962dc-e945-40c9-b108-f7e12b36f73e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="f9c7fa51-d047-5b3b-dcba-a8308fb2329b" executionId="1c892d30-85da-40ef-addf-d92671d85fef" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="34736688-340f-df16-ec2d-d03f0a9160d9" executionId="b35a31d8-60d4-4cff-a0cc-cc8a7d94afec" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dd557de1-44c8-42f9-38a0-d5af844f7317" executionId="d2c0fc32-c6b9-4598-9a9b-a96f65ef899d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2899c56b-6eae-9579-a7bb-643bbb53db18" executionId="eec897c2-4f26-45ca-a710-3376e3e4eac1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="944b0e07-b6bb-9ee1-c56a-2694c9858c3e" executionId="ac644b56-3af3-4ca0-a1c2-a9c287f35187" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="eed11379-dee5-0e05-297d-b64efa5e6e9c" executionId="882e5659-56b1-48c7-b581-dbb3ff6721fd" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ebca4223-746d-74f3-38e7-1586b3105cab" executionId="3ff7f33a-35d1-46e4-9dba-5700f323f54b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b624173f-2b80-d3fe-de13-8deadb8f2ea0" executionId="b3c20361-8c16-4133-859a-b8696af6f097" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7326d203-90dc-2ad2-b354-5a65401bc10c" executionId="50b01c39-dae1-4163-a4cd-b160e91f4549" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="734c68a2-aeaa-b307-9fec-70e8b2ffc41d" executionId="725db9ed-487e-475b-a04f-8f09c792707d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6ef41a4e-1f14-c3ca-1033-2359c301b8e8" executionId="c1453583-3f1b-4b06-b351-307d0bffaa63" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="cad8e3c8-bc50-786a-444e-4735cba36224" executionId="abed4d43-4898-4ce1-bc95-e74c4a2118c0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="561bb54e-b742-42ec-efd3-2142e44e9eb0" executionId="122678d1-5671-498e-a516-d77625d2fb43" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="382672ed-ee50-17b0-4479-d23757ccce62" executionId="c4004601-2f91-4910-a9d6-35bda40ed5e7" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="fdedfd8a-fcd6-7541-7943-407d3601c8ee" executionId="c4d1ac37-f6f9-4180-8aca-0ae45ea27016" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e2f25ae9-ae01-a339-e7e8-86d47fedbcff" executionId="e1eb5e21-8da9-49bb-b2c7-7fe7a76d319f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="21" executed="21" passed="21" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>NUnit Adapter 5.0.0.0: Test execution started&#xD;
+Running all tests in C:\Users\Akhi\source\repos\BookerApiTest\BookerApiTest\bin\Debug\net8.0\BookerApiTest.dll&#xD;
+   NUnit3TestExecutor discovered 21 of 21 NUnit test cases using Current Discovery mode, Non-Explicit run&#xD;
+Error starting test case for 'Get booking details with invalid ID - Error Cases': Unable to activate the test context because the fixture context is active.&#xD;
+Given I have an invalid booking ID 999999999&#xD;
+-&gt; done: GetBookingSteps.GivenIHaveAnInvalidBookingID("999999999") (0.1s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.5s)&#xD;
+Then the booking details response status code should be 404&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsResponseStatusCodeShouldBe(404) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking details with invalid ID - Error Cases': Unable to activate the test context because the fixture context is active.&#xD;
+Given I have an invalid booking ID invalid_id&#xD;
+-&gt; done: GetBookingSteps.GivenIHaveAnInvalidBookingID("invalid_id") (0.0s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.3s)&#xD;
+Then the booking details response status code should be 404&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsResponseStatusCodeShouldBe(404) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking details with invalid ID - Error Cases': Unable to activate the test context because the fixture context is active.&#xD;
+Given I have an invalid booking ID 0&#xD;
+-&gt; done: GetBookingSteps.GivenIHaveAnInvalidBookingID("0") (0.0s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.3s)&#xD;
+Then the booking details response status code should be 404&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsResponseStatusCodeShouldBe(404) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking details with invalid ID - Error Cases': Unable to activate the test context because the fixture context is active.&#xD;
+Given I have an invalid booking ID -1&#xD;
+-&gt; done: GetBookingSteps.GivenIHaveAnInvalidBookingID("-1") (0.0s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.3s)&#xD;
+Then the booking details response status code should be 404&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsResponseStatusCodeShouldBe(404) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking details with valid ID - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+Given I request booking details for ID 1 with Accept: application/json header&#xD;
+-&gt; done: GetBookingSteps.GivenIRequestBookingDetailsForIDWithHeader(1) (0.0s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+And the response should contain valid booking details with JSON content type&#xD;
+-&gt; done: GetBookingSteps.ThenTheResponseShouldContainValidBookingDetailsWithJsonContentType() (0.0s)&#xD;
+And the booking details should have all required fields with correct types&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsShouldHaveAllRequiredFieldsWithCorrectTypes() (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking details with valid ID - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+Given I request booking details for ID 2 with Accept: application/json header&#xD;
+-&gt; done: GetBookingSteps.GivenIRequestBookingDetailsForIDWithHeader(2) (0.0s)&#xD;
+When I request booking details for that ID&#xD;
+-&gt; done: GetBookingSteps.WhenIRequestBookingDetailsForThatID() (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+And the response should contain valid booking details with JSON content type&#xD;
+-&gt; done: GetBookingSteps.ThenTheResponseShouldContainValidBookingDetailsWithJsonContentType() (0.0s)&#xD;
+And the booking details should have all required fields with correct types&#xD;
+-&gt; done: GetBookingSteps.ThenTheBookingDetailsShouldHaveAllRequiredFieldsWithCorrectTypes() (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2023/02/28 |&#xD;
+  | checkout  | 2023/03/01 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2023-03-01 |&#xD;
+  | checkout  | 2023-02-28 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2030-01-01 |&#xD;
+  | checkout  | 2030-01-10 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2000-01-01 |&#xD;
+  | checkout  | 2000-01-10 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.8s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2023-02-28 |&#xD;
+  | checkout  | 2023-02-28 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with edge case parameters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | checkin   | 2010-01-01 |&#xD;
+  | checkout  | 2030-12-31 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.7s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with special characters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | firstname | Anne-Marie |&#xD;
+  | lastname  | O'Connor   |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with special characters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value |&#xD;
+  | firstname | Jos�  |&#xD;
+  | lastname  | Mu�oz |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with special characters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value        |&#xD;
+  | firstname | Mary Jane    |&#xD;
+  | lastname  | Parker Smith |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with special characters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value |&#xD;
+  | firstname | Agent |&#xD;
+  | lastname  | 007   |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with special characters': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value   |&#xD;
+  | firstname | Johnny# |&#xD;
+  | lastname  | $mith   |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with valid parameters - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value |&#xD;
+  | firstname | Sally |&#xD;
+  | lastname  | Brown |&#xD;
+  | checkin   |       |&#xD;
+  | checkout  |       |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with valid parameters - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | firstname |            |&#xD;
+  | lastname  |            |&#xD;
+  | checkin   | 2014-03-13 |&#xD;
+  | checkout  | 2014-05-21 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.4s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with valid parameters - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value      |&#xD;
+  | firstname | Sally      |&#xD;
+  | lastname  | Brown      |&#xD;
+  | checkin   | 2014-03-13 |&#xD;
+  | checkout  | 2014-05-21 |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.3s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+Error starting test case for 'Get booking IDs with valid parameters - Happy Path': Unable to activate the test context because the fixture context is active.&#xD;
+When I request booking IDs with parameters&#xD;
+  --- table step argument ---&#xD;
+  | Parameter | Value |&#xD;
+  | firstname |       |&#xD;
+  | lastname  |       |&#xD;
+  | checkin   |       |&#xD;
+  | checkout  |       |&#xD;
+-&gt; done: GetBookingIdsSteps.WhenIRequestBookingIDsWithParameters(&lt;table&gt;) (0.5s)&#xD;
+Then the response status code should be 200&#xD;
+-&gt; done: CommonSteps.ThenTheResponseStatusCodeShouldBe(200) (0.0s)&#xD;
+&#xD;
+NUnit Adapter 5.0.0.0: Test execution complete&#xD;
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>

@@ -1,0 +1,146 @@
+{
+  "uuid": "2a791af7-30e9-4a04-b3db-cea771c354e5",
+  "historyId": "42bfeb7d024e106be8760c5f847bcc3a",
+  "testCaseId": "a39c46c4f4bf00699dbfa074086bd76d",
+  "fullName": "BookerApiTest/Features/Update Booking API/Attempt to update booking with invalid data",
+  "labels": [
+    {
+      "name": "host",
+      "value": "Booker API Test Report"
+    },
+    {
+      "name": "thread",
+      "value": "NUnit.Fw.NonParallelWorker"
+    },
+    {
+      "name": "language",
+      "value": "C#"
+    },
+    {
+      "name": "framework",
+      "value": "Reqnroll"
+    },
+    {
+      "name": "package",
+      "value": "Features.Update Booking API"
+    },
+    {
+      "name": "feature",
+      "value": "Update Booking API"
+    },
+    {
+      "name": "tag",
+      "value": "UpdateBooking"
+    },
+    {
+      "name": "tag",
+      "value": "Validation"
+    }
+  ],
+  "links": [],
+  "name": "Attempt to update booking with invalid data",
+  "status": "failed",
+  "statusDetails": {
+    "known": false,
+    "muted": false,
+    "flaky": false,
+    "message": "  Expected status code 400 but got 200\nAssert.That((int)response.StatusCode, Is.EqualTo(expectedStatusCode))\r\n  Expected: 400\r\n  But was:  200\r\n",
+    "trace": "NUnit.Framework.AssertionException:   Expected status code 400 but got 200\nAssert.That((int)response.StatusCode, Is.EqualTo(expectedStatusCode))\r\n  Expected: 400\r\n  But was:  200\r\n\r\n   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, String actualExpression, String constraintExpression)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, FormattableString message, String actualExpression, String constraintExpression)\r\n   at BookerApiTest.CommonSteps.ThenTheResponseStatusCodeShouldBe(Int32 expectedStatusCode) in C:\\Users\\Akhi\\source\\repos\\BookerApiTest\\BookerApiTest\\CommonSteps.cs:line 15\r\n   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)\r\n   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)\r\n--- End of stack trace from previous location ---\r\n   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.OnAfterLastStepAsync()\r\n   at Reqnroll.TestRunner.CollectScenarioErrorsAsync()\r\n   at Allure.ReqnrollPlugin.SelectiveRun.TestPlanAwareTestRunner.CollectScenarioErrorsAsync()\r\n   at BookerApiTest.Features.UpdateBookingAPIFeature.ScenarioCleanupAsync()\r\n   at BookerApiTest.Features.UpdateBookingAPIFeature.AttemptToUpdateBookingWithInvalidData(String first, String last, String price, String deposit, String checkin, String checkout, String needs, String[] exampleTags) in C:\\Users\\Akhi\\source\\repos\\BookerApiTest\\BookerApiTest\\Features\\UpdateBooking.feature:line 45\r\n   at NUnit.Framework.Internal.TaskAwaitAdapter.GenericAdapter`1.GetResult()\r\n   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await[TResult](TestExecutionContext context, Func`1 invoke)\r\n   at NUnit.Framework.Internal.AsyncToSyncAdapter.Await(TestExecutionContext context, Func`1 invoke)\r\n   at NUnit.Framework.Internal.Commands.TestMethodCommand.RunTestMethod(TestExecutionContext context)\r\n   at NUnit.Framework.Internal.Commands.TestMethodCommand.Execute(TestExecutionContext context)\r\n   at NUnit.Framework.Internal.Commands.BeforeAndAfterTestCommand.<>c__DisplayClass1_0.<Execute>b__0()\r\n   at NUnit.Framework.Internal.Commands.DelegatingTestCommand.RunTestMethodInThreadAbortSafeZone(TestExecutionContext context, Action action)"
+  },
+  "stage": "finished",
+  "steps": [
+    {
+      "name": "Given I have a valid authentication token",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1746955769111,
+      "stop": 1746955769929
+    },
+    {
+      "name": "When I update booking ID 1 with the following invalid data:",
+      "status": "passed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [
+        {
+          "name": "Data Table",
+          "source": "060811db-07de-4a1c-800b-53df2865cc49-attachment.csv",
+          "type": "text/csv"
+        }
+      ],
+      "parameters": [],
+      "start": 1746955769936,
+      "stop": 1746955770336
+    },
+    {
+      "name": "Then the response status code should be 400",
+      "status": "failed",
+      "statusDetails": {
+        "known": false,
+        "muted": false,
+        "flaky": false,
+        "message": "  Expected status code 400 but got 200\nAssert.That((int)response.StatusCode, Is.EqualTo(expectedStatusCode))\r\n  Expected: 400\r\n  But was:  200\r\n",
+        "trace": "NUnit.Framework.AssertionException:   Expected status code 400 but got 200\nAssert.That((int)response.StatusCode, Is.EqualTo(expectedStatusCode))\r\n  Expected: 400\r\n  But was:  200\r\n\r\n   at NUnit.Framework.Assert.ReportFailure(String message)\r\n   at NUnit.Framework.Assert.ReportFailure(ConstraintResult result, String message, String actualExpression, String constraintExpression)\r\n   at NUnit.Framework.Assert.That[TActual](TActual actual, IResolveConstraint expression, FormattableString message, String actualExpression, String constraintExpression)\r\n   at BookerApiTest.CommonSteps.ThenTheResponseStatusCodeShouldBe(Int32 expectedStatusCode) in C:\\Users\\Akhi\\source\\repos\\BookerApiTest\\BookerApiTest\\CommonSteps.cs:line 15\r\n   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)\r\n   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)\r\n--- End of stack trace from previous location ---\r\n   at Reqnroll.Bindings.BindingInvoker.InvokeBindingAsync(IBinding binding, IContextManager contextManager, Object[] arguments, ITestTracer testTracer, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepMatchAsync(BindingMatch match, Object[] arguments, DurationHolder durationHolder)\r\n   at Reqnroll.Infrastructure.TestExecutionEngine.ExecuteStepAsync(IContextManager contextManager, StepInstance stepInstance)"
+      },
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "start": 1746955770336,
+      "stop": 1746955770355
+    }
+  ],
+  "attachments": [],
+  "parameters": [
+    {
+      "name": "first",
+      "value": "\"\"",
+      "excluded": false
+    },
+    {
+      "name": "last",
+      "value": "\"Brown\"",
+      "excluded": false
+    },
+    {
+      "name": "price",
+      "value": "\"111\"",
+      "excluded": false
+    },
+    {
+      "name": "deposit",
+      "value": "\"true\"",
+      "excluded": false
+    },
+    {
+      "name": "checkin",
+      "value": "\"2018-01-01\"",
+      "excluded": false
+    },
+    {
+      "name": "checkout",
+      "value": "\"2019-01-01\"",
+      "excluded": false
+    },
+    {
+      "name": "needs",
+      "value": "\"Breakfast\"",
+      "excluded": false
+    }
+  ],
+  "start": 1746955769107,
+  "stop": 1746955770360
+}

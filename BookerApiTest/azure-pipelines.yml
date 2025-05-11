@@ -1,0 +1,42 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  imageName: 'bookerapitest'
+
+steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '8.0.x'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    projects: '**/*.csproj'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '**/*.csproj'
+    arguments: '--configuration Release'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: '<your-container-registry-service-connection>'
+    repository: '$(imageName)'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
+    tags: |
+      $(Build.BuildId)
+
+- task: Docker@2
+  displayName: 'Run container'
+  inputs:
+    containerRegistry: '<your-container-registry-service-connection>'
+    repository: '$(imageName)'
+    command: 'run'
+    arguments: '-p 8000:8000'

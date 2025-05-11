@@ -1,0 +1,9 @@
+{
+    "allure": {
+        "directory": "allure-results",
+        "title": "Booker API Report",
+        "links": [
+            "https://example.org/{issue}"
+        ]
+    }
+}

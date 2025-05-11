@@ -1,0 +1,10 @@
+{
+    "allure": {
+        "directory": "allure-results",
+        "title": "Booker API Test Report",
+        "environment": {
+            "framework": "Reqnroll 3.0",
+            "runtime": ".NET 8.0"
+        }
+    }
+}

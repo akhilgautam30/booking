@@ -1,0 +1,12 @@
+{
+    "reqnroll": {
+        "reporting": {
+            "enabled": true,
+            "outputDirectory": "TestResults",
+            "format": "html"
+        }
+    },
+    "language": {
+        "feature": "en-US"
+    }
+}
