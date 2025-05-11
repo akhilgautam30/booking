@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     npm \
     python3 \
-    openjdk-11-jdk-headless && \
+    openjdk-17-jre-headless && \
     npm install -g allure-commandline && \
     apt-get clean
 
