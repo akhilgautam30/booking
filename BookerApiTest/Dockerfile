@@ -3,11 +3,12 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 # Copy the project files
-COPY *.csproj ./
+COPY *.csproj ./BookerApiTest/
+WORKDIR /app/BookerApiTest
 RUN dotnet restore
 
 # Copy the rest of the application files
-COPY . ./
+COPY . ./BookerApiTest/
 RUN dotnet build --configuration Release --output /app/build
 
 # Publish the application
@@ -27,7 +28,7 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean
 
 # Copy the test results directory
-COPY ./bin/Debug/net8.0 /app/test-results
+COPY --from=build /app/build/bin/Debug/net8.0 /app/test-results
 
 # Run tests, generate Allure report, and serve it
 CMD dotnet test --logger "trx;LogFileName=test-results.trx" && \
